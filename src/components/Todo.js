@@ -4,8 +4,8 @@ import React from "react";
 export const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
   return (
     <div
-      className="flex justify-between items-center bg-[#8758ff]
-     text-white px-4 py-3 mb-4 rounded-[5px]"
+      className="flex justify-between items-center bg-indigo-500
+     text-white py-3 px-4 rounded-md mb-4"
     >
       <p
         onClick={() => toggleComplete(task.id)}
@@ -18,7 +18,10 @@ export const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
         {task.task}
       </p>
       <div className="flex ">
-        <PencilSquareIcon className="w-6 h-6 cursor-pointer" onClick={() => editTodo(task.id)} />
+        <PencilSquareIcon
+          className="w-6 h-6 cursor-pointer"
+          onClick={() => editTodo(task.id)}
+        />
         <TrashIcon
           className="w-6 h-6 cursor-pointer ml-3"
           onClick={() => deleteTodo(task.id)}

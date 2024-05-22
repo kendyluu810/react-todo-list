@@ -45,7 +45,7 @@ export const TodoWrapper = () => {
   };
 
   return (
-    <div className="bg-[#1A1A40] mt-20 p-8 rounded-[5px]">
+    <div className="bg-gray-900 mt-20 p-8 rounded-md">
       <h1>Get Things Done!</h1>
       <TodoForm addTodo={addTodo} />
       {todos.map((todo, index) =>
